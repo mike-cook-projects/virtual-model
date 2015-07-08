@@ -75,7 +75,7 @@ module.exports = (function() {
                 }
             }
 
-            // Return the next path starting point
+            // We hit the end so return our value
             return { value: dataValue };
         },
         //// Try and get the data from the server

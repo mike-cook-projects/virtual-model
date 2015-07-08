@@ -41,49 +41,28 @@ describe("Falcor", function() {
             }
         }
 
-        SERVER_DATA = {
-            movies: {
-                "0": { title: 'Ginsburg' },
-                "1": { title: 'Ginsburg 2: The Reckoning' },
-                "2": { title: 'Ginsburg 3: Unscared to Die' },
-                "3": { title: 'Ginsburg 4: Uncensored' },
-                "4": { title: 'Ginsburg 5: Censored' },
-                "5": { title: 'Ginsburg 6: Full Frontal' },
-            },
-            actors: {
-                "0": { name: "Sam McGoo", lastMovie: ['movies', 1] },
-                "1": { name: "Gooply", lastMovie: ['movies', 5] }
-            },
-            songs: {
-                "0": { name: "Rural Dog Barks Vol. 2" }
-            },
-            testServer: {
-                "0": ["that"]
-            }
-        }
-
         connection = (function() {
             let serverFalcor = new Falcor(),
                 SERVER_DATA = {
-                movies: {
-                    "0": { title: 'Ginsburg' },
-                    "1": { title: 'Ginsburg 2: The Reckoning' },
-                    "2": { title: 'Ginsburg 3: Unscared to Die' },
-                    "3": { title: 'Ginsburg 4: Uncensored' },
-                    "4": { title: 'Ginsburg 5: Censored' },
-                    "5": { title: 'Ginsburg 6: Full Frontal' },
-                },
-                actors: {
-                    "0": { name: "Sam McGoo", lastMovie: ['movies', 1] },
-                    "1": { name: "Gooply", lastMovie: ['movies', 5] }
-                },
-                songs: {
-                    "0": { name: "Rural Dog Barks Vol. 2" }
-                },
-                testServer: {
-                    "0": ["that"]
-                }
-            }
+                    movies: {
+                        "0": { title: 'Ginsburg' },
+                        "1": { title: 'Ginsburg 2: The Reckoning' },
+                        "2": { title: 'Ginsburg 3: Unscared to Die' },
+                        "3": { title: 'Ginsburg 4: Uncensored' },
+                        "4": { title: 'Ginsburg 5: Censored' },
+                        "5": { title: 'Ginsburg 6: Full Frontal' },
+                    },
+                    actors: {
+                        "0": { name: "Sam McGoo", lastMovie: ['movies', 1] },
+                        "1": { name: "Gooply", lastMovie: ['movies', 5] }
+                    },
+                    songs: {
+                        "0": { name: "Rural Dog Barks Vol. 2" }
+                    },
+                    testServer: {
+                        "0": ["that"]
+                    }
+                };
 
             return function(path, handleResult) {
                 setTimeout(function() {
